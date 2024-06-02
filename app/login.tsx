@@ -13,7 +13,7 @@ export default function LoginScreen() {
     const login = ()=>{
         loginService.login({email:email,password:passord}).then((response)=>{
             if(response.data.role !== "WAITER"){
-                setText("wrongRole")
+                setText("wrongRole needs to be waiter")
             }else{
                 Login(response.data.token,response.data.email,response.data.role)
                 router.replace("/")
