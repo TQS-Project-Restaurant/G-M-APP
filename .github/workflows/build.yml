@@ -26,9 +26,6 @@ jobs:
         working-directory: ./app
         run: npm install
 
-      - name: Build project
-        run: npm run build
-
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
