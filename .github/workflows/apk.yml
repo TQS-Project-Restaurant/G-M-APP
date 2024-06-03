@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     env:
-      process.env.EXPO_PUBLIC_API_URL: http://${{ secrets.URL }}/api
+      EXPO_PUBLIC_API_URL: http://${{ secrets.URL }}/api
     runs-on: ubuntu-latest
     steps:
       - name: Setup repo
