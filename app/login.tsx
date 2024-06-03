@@ -7,11 +7,11 @@ import { View, Text,TextInput,Button } from 'react-native';
 export default function LoginScreen() {
     const Login = useUserStore((state:any) => state.login)
     const [email,setEmail] = useState("");
-    const [passord,setPassword] = useState("");
+    const [password,setPassword] = useState("");
     const [text,setText] = useState("");
 
     const login = ()=>{
-        loginService.login({email:email,password:passord}).then((response)=>{
+        loginService.login({email:email,password:password}).then((response)=>{
             if(response.data.role !== "WAITER"){
                 setText("wrongRole needs to be waiter")
             }else{
