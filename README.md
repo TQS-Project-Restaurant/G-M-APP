@@ -4,6 +4,8 @@ Este Repositorio contem a aplicaçao movel para o garçom desenvolvida em react 
 EXPO_PUBLIC_API_URL=http://pcIp:8080/api
 
 ## How to run
+### Change Branch
+Pull from the dev branch(beacause the main has api url hardcoded to build apk)
 
 ### Intall dependencies
 ```
