@@ -22,7 +22,7 @@ export default function TabTwoScreen() {
   return (
     <View className="flex-1 flex-row flex py-9 px-2 bg-slate-400 rounded-md gap-1 flex-wrap">
       {requests?.map((request:any)=>(
-        <View className='w-[48%] bg-slate-500 rounded-md flex flex-row p-2 justify-between'>
+        <View key={request.id} className='w-[48%] bg-slate-500 rounded-md flex flex-row p-2 justify-between'>
           <View>
             <Text>Pedido:{request.id}</Text>
             <Text>Mesa:{request.mesa}</Text>
