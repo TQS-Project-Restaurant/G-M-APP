@@ -2,7 +2,7 @@ import { useUserStore } from "@/stores/useUserStore";
 import axios from "axios";
 
 const Client = axios.create({
-    baseURL: process.env.EXPO_PUBLIC_API_URL,
+    baseURL: "http://deti-tqs-01.ua.pt/api",
     timeout: 5000,
   });
 
