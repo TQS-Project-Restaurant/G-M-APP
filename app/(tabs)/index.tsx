@@ -1,4 +1,4 @@
-import MenuDia, { Comida, QtComida } from '@/entities/MenuDia';
+import MenuDia, { QtComida } from '@/entities/MenuDia';
 import menuDiaService from '@/services/menuDiaService';
 import reservasService from '@/services/reservasService';
 import { useUserStore } from '@/stores/useUserStore';
@@ -80,7 +80,7 @@ export default function HomeScreen() {
     return (
       <View className="flex-1 flex justify-center items-center bg-slate-400 rounded-md">
         <View className='flex flex-row flex-wrap gap-2 justify-around'>
-          {menuDia && menuDia.bebidas.map((bebida)=>(
+          {menuDia?.bebidas.map((bebida)=>(
             <View key={bebida.id} className='w-[45%] bg-slate-500 rounded-md flex flex-row p-2 justify-between'>
               <View>
                 <Text>{bebida.nome}</Text>
@@ -97,7 +97,7 @@ export default function HomeScreen() {
     return (
       <View className="flex-1 flex justify-center items-center bg-slate-400 rounded-md">
         <View className='flex flex-row flex-wrap gap-2 justify-around'>
-          {menuDia && menuDia.pratos.map((prato)=>(
+          {menuDia?.pratos.map((prato)=>(
             <View key={prato.id} className='w-[45%] bg-slate-500 rounded-md flex flex-row p-2 justify-between'>
               <View>
                 <Text>{prato.nome}</Text>
