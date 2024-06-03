@@ -27,7 +27,7 @@ export default function TabTwoScreen() {
             <Text>Pedido:{request.id}</Text>
             <Text>Mesa:{request.mesa}</Text>
           </View>
-          <Button title="buscado" onPress={()=>update(request.id,request)}></Button>
+          <Button title="Entregue" onPress={()=>update(request.id,request)}></Button>
         </View>
       ))}
     </View>
