@@ -14,7 +14,7 @@ Client.interceptors.request.use(
     return config
   },
   (error) =>{
-    return Promise.reject(error);
+    return Promise.reject(new Error(error));
   }
 )
 
@@ -30,7 +30,7 @@ Client.interceptors.response.use(
         logout()
       }
   
-      return Promise.reject(error);
+      return Promise.reject(new Error(error));
     }
   )
 

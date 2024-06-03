@@ -1,4 +1,4 @@
-export default interface booking{
+export default interface Booking{
     id:number,
     utilizador:{
         email:string,

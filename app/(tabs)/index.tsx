@@ -1,6 +1,5 @@
 import { useUserStore } from '@/stores/useUserStore';
-import { Link } from 'expo-router';
-import { View,Text,Image, StyleSheet, Platform, Button } from 'react-native';
+import { View,Text, Button } from 'react-native';
 
 export default function HomeScreen() {
   const Logout = useUserStore((state:any) => state.logout)
