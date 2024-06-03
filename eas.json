@@ -2,7 +2,7 @@
     "build": {
       "preview": {
         "env":{
-            "EXPO_PUBLIC_API_URL": "http://localhost:8080/api/"
+            "EXPO_PUBLIC_API_URL": "http://deti-tqs-01.ua.pt/api"
         },
         "android": {
           "buildType": "apk"
