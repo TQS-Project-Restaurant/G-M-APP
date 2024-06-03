@@ -18,7 +18,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Register',
+          title: 'Novo Pedido',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
@@ -27,7 +27,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
+          title: 'Pedidos A entregar',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'albums' : 'albums-outline'} color={color} />
           ),
@@ -36,7 +36,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="bookings"
         options={{
-          title: 'Bookings',
+          title: 'Reservas',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'albums' : 'albums-outline'} color={color} />
           ),
