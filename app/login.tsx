@@ -1,3 +1,4 @@
+import Client from '@/services/client';
 import loginService from '@/services/loginService';
 import { useUserStore } from '@/stores/useUserStore';
 import { router } from 'expo-router';
@@ -11,6 +12,7 @@ export default function LoginScreen() {
     const [text,setText] = useState("");
 
     const login = ()=>{
+        setText(Client.defaults.baseURL?.toString()||"")
         loginService.login({email:email,password:password}).then((response)=>{
             if(response.data.role !== "WAITER"){
                 setText("wrongRole needs to be waiter")
@@ -18,8 +20,6 @@ export default function LoginScreen() {
                 Login(response.data.token,response.data.email,response.data.role)
                 router.replace("/")
             }
-        }).catch(()=>{
-            setText("error")
         })
     }
   return (
