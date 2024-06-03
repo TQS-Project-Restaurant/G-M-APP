@@ -14,6 +14,13 @@ export default function HomeScreen() {
   const [pratos,setPratos] = useState<Array<QtComida>>([]);
   const [mesa,setMesa] = useState(0);
 
+  const reset = useCallback(()=>{
+    Alert.alert("reseted")
+      setBebidas([]);
+      setPratos([]);
+      setMesa(0);
+  },[])
+
   const send = useCallback(()=>{
     reservasService.makeReserva({
       bebidas:bebidas,
@@ -135,7 +142,10 @@ export default function HomeScreen() {
         <Text className='text-xl'>Mesa</Text>
         <TextInput className=' border border-black rounded-md w-[20%] px-1' value={!Number.isNaN(mesa)?mesa.toString():""} placeholder='mesa' onChange={(e)=>setMesa(parseInt(e.nativeEvent.text))}></TextInput>
       </View>
-      <Button title='Fazer Pedido' onPress={send}></Button>
+      <View className='flex flex-row justify-around'>
+        <Button title='Fazer Pedido' onPress={send}></Button>
+        <Button title='Reset' onPress={reset}></Button>
+      </View>
       <View className='mt-auto'>
         <Button title='logout' onPress={Logout}></Button>
       </View>
